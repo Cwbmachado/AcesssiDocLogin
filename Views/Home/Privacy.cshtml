@@ -1,0 +1,30 @@
+﻿@model AcessiDOC1.Models.Usuario
+
+@{
+    ViewBag.Title = "Login";
+}
+<div class="form-container">
+    @using (Html.BeginForm("Autenticar", "Login", FormMethod.Post, new { @class = "form-group" }))
+    {
+        @Html.AntiForgeryToken()
+
+        <div>
+            @Html.LabelFor(model => model.NomeUsuario, new { @class = "control-label" })
+            @Html.EditorFor(model => model.NomeUsuario, new { htmlAttributes = new { @class = "form-control" } })
+        </div>
+
+        <div>
+            @Html.LabelFor(model => model.Senha, new { @class = "control-label" })
+            @Html.PasswordFor(model => model.Senha, new { @class = "form-control" })
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-connect">Conecte-se</button>
+
+        @if (ViewBag.MensagemErro != null)
+        {
+            <div class="alert alert-danger" role="alert">
+                @ViewBag.MensagemErro
+            </div>
+        }
+    }
+</div>

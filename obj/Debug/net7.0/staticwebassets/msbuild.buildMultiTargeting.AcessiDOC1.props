@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\AcessiDOC1.props" />
+</Project>

@@ -1,0 +1,13 @@
+
+.form-container {
+    max-width: 300px;
+    margin: auto;
+}
+
+.form-group {
+    text-align: center;
+}
+
+.btn-connect {
+    margin-top: 10px;
+}
